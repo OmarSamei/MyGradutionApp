@@ -3,15 +3,15 @@ import 'package:graduation_project/Screens/AppContent/Diagnosis_page.dart';
 
 
 class HomePage extends StatelessWidget {
-  const HomePage({Key? key}) : super(key: key);
+  const HomePage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: PreferredSize(preferredSize: Size.fromHeight(60),
+      appBar: PreferredSize(preferredSize: const Size.fromHeight(60),
         child: AppBar(
           
-          backgroundColor: Color.fromARGB(255, 255, 255, 255),
+          backgroundColor: const Color.fromARGB(255, 255, 255, 255),
           elevation: 0, // إزالة الظل
           leading: IconButton(iconSize: 40,
             icon: const Icon(Icons.notifications_none_outlined, color: Colors.black),
@@ -46,7 +46,7 @@ class HomePage extends StatelessWidget {
             ElevatedButton(
               onPressed: () {
                   Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) {
-                          return DiagnosisPage();
+                          return const DiagnosisPage();
                         }));
                 },
               style: ElevatedButton.styleFrom(

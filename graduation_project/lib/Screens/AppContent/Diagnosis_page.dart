@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class DiagnosisPage extends StatelessWidget {
-  const DiagnosisPage({Key? key}) : super(key: key);
+  const DiagnosisPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -10,7 +10,7 @@ class DiagnosisPage extends StatelessWidget {
         backgroundColor: Colors.white, // لون خلفية شريط التطبيق
         elevation: 0, // إزالة الظل
         leading: IconButton(
-          icon: Icon(Icons.arrow_back, color: Colors.black,size: 33,), // زر الرجوع
+          icon: const Icon(Icons.arrow_back, color: Colors.black,size: 33,), // زر الرجوع
           onPressed: () {
             Navigator.pop(context);
           },
@@ -21,8 +21,8 @@ class DiagnosisPage extends StatelessWidget {
       body:Column(
       
             children: [
-              SizedBox(height: 160), // مسافة بين شريط التطبيق والمحتوى
-              Text(
+              const SizedBox(height: 160), // مسافة بين شريط التطبيق والمحتوى
+              const Text(
                 'اختر أي من الطريقتين للتشخيص',
                 style: TextStyle(
                   
@@ -32,7 +32,7 @@ class DiagnosisPage extends StatelessWidget {
                             fontWeight: FontWeight.w700,
                 ),
               ),
-              SizedBox(height: 88,),
+              const SizedBox(height: 88,),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
@@ -41,7 +41,7 @@ class DiagnosisPage extends StatelessWidget {
                         Navigator.push(
                           context,
                           MaterialPageRoute(builder: (BuildContext context) {
-                            return DiagnosisPage();
+                            return const DiagnosisPage();
                           }),
                         );
                       },
