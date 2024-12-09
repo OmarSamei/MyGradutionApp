@@ -1,0 +1,44 @@
+import 'package:flutter/material.dart';
+
+class QuestionsPage extends StatelessWidget {
+  const QuestionsPage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.white, 
+        elevation: 0,
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back, color: Colors.black,size: 33,), // زر الرجوع
+          onPressed: () {
+            Navigator.pop(context);
+          },
+        ),
+      ),
+      backgroundColor: Colors.white,
+    
+      body:Center(
+        child: Column(
+        
+              children: [
+                const SizedBox(height: 10), // مسافة بين شريط التطبيق والمحتوى
+                const Text(
+                      "الأسئلة",
+                  style: TextStyle(
+                    
+                  fontFamily: "Alexandria",
+                    color: Colors.blue,
+                              fontSize: 26,
+                              fontWeight: FontWeight.w700,
+                  ),
+                ),
+                        //هنضيف هنا الاسئلة لما تتعمل
+                ],
+              ),
+      ),
+        );
+        
+      
+  }
+}

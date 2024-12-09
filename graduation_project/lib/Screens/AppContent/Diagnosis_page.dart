@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:graduation_project/Screens/AppContent/photo_upload.dart';
+import 'package:graduation_project/Screens/AppContent/questions_page.dart';
 
 class DiagnosisPage extends StatelessWidget {
   const DiagnosisPage({super.key});
@@ -41,7 +43,7 @@ class DiagnosisPage extends StatelessWidget {
                         Navigator.push(
                           context,
                           MaterialPageRoute(builder: (BuildContext context) {
-                            return const DiagnosisPage();
+                            return const QuestionsPage();
                           }),
                         );
                       },
@@ -66,7 +68,9 @@ class DiagnosisPage extends StatelessWidget {
                     const SizedBox(width: 30,),
                     ElevatedButton(
                       onPressed: () {
-                        // الإجراء عند الضغط على الزر الثاني
+                        Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) {
+                          return  ImageUploadPage();
+                        }));
                       },
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.grey[200],
