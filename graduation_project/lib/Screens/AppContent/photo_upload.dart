@@ -5,6 +5,8 @@ import 'dart:io';
 
 
 class ImageUploadPage extends StatefulWidget {
+  const ImageUploadPage({super.key});
+
   @override
   _ImageUploadPageState createState() => _ImageUploadPageState();
 }
@@ -30,7 +32,7 @@ class _ImageUploadPageState extends State<ImageUploadPage> {
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: [Text(
+          children: [const Text(
                 'اضافة صورة',
                 style: TextStyle(
                   
@@ -40,7 +42,7 @@ class _ImageUploadPageState extends State<ImageUploadPage> {
                             fontWeight: FontWeight.w700,
                 ),
               ),
-              SizedBox(height: 120),
+              const SizedBox(height: 120),
 
             GestureDetector(
               onTap: _pickImage,
@@ -52,14 +54,14 @@ class _ImageUploadPageState extends State<ImageUploadPage> {
                   border: Border.all(color: Colors.grey),
                 ),
                 child: _image == null
-                    ? Icon(Icons.add_a_photo, size: 50)
+                    ? const Icon(Icons.add_a_photo, size: 50)
                     : Image.file(
                         File(_image!.path),
                         fit: BoxFit.cover,
                       ),
               ),
             ),
-            SizedBox(height: 100),
+            const SizedBox(height: 100),
             if (_image != null) // يظهر زر الإرسال فقط عند اختيار صورة
               ElevatedButton(
               onPressed: () {

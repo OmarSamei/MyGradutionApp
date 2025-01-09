@@ -18,12 +18,12 @@ class ResultPage extends StatelessWidget {
       ),
       backgroundColor: Colors.white,
     
-      body:Center(
+      body:const Center(
         child: Column(
         
               children: [
-                const SizedBox(height: 30), // مسافة بين شريط التطبيق والمحتوى
-                const Text(
+                SizedBox(height: 30), // مسافة بين شريط التطبيق والمحتوى
+                Text(
                       "النتائج",
                   style: TextStyle(
                     

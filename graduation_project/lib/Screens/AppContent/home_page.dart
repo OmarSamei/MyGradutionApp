@@ -46,7 +46,7 @@ class HomePage extends StatelessWidget {
             ElevatedButton(
               onPressed: () {
                   Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) {
-                          return const DiagnosisPage();
+                          return DiagnosisPage();
                         }));
                 },
               style: ElevatedButton.styleFrom(
